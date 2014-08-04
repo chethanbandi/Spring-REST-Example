@@ -1,0 +1,30 @@
+apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+
+version = 1.0
+
+manifest {
+	attributes 'Implementation-Title': 'SpringRestTemplate', 'Implementation-Version': version
+}
+
+dependencies {
+	compile 'javax.servlet:servlet-api:2.5'
+  compile 'ch.qos.logback:logback-classic:1.0.13'
+	compile 'org.springframework:spring-core:4.0.5.RELEASE'
+	compile 'org.springframework:spring-context:4.0.5.RELEASE'
+	compile 'org.springframework:spring-context-support:4.0.5.RELEASE'
+	compile 'org.springframework:spring-expression:4.0.5.RELEASE'
+	compile 'org.springframework:spring-beans:4.0.5.RELEASE'
+	compile 'org.springframework:spring-webmvc:4.0.5.RELEASE'
+	compile 'org.springframework:spring-web:4.0.5.RELEASE'
+
+  testCompile 'junit:junit:4.11'
+  testCompile 'org.mockito:mockito-all:1.9.5'
+}
+
+repositories {
+  mavenCentral()
+}
